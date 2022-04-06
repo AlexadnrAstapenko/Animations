@@ -28,7 +28,7 @@ class ViewController: UIViewController, NVActivityIndicatorViewable {
     var hight = 50.0
     var wight = 50.0
     var textSize = 20.0
-    var time: UInt64 = 5
+    var time = 5.0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +55,7 @@ class ViewController: UIViewController, NVActivityIndicatorViewable {
 
     @IBAction func steperTime(_ sender: UIStepper) {
         self.timeStepper.text = "Time: \((sender as UIStepper).value)"
-        time = UInt64((sender as UIStepper).value)
+        time = Double((sender as UIStepper).value)
     }
 
     @IBAction func myAction(_: UIButton) {
@@ -69,7 +69,7 @@ class ViewController: UIViewController, NVActivityIndicatorViewable {
             textColor: Data.colors[textColor.selectedSegmentIndex]
         )
 
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time) { [weak self] in
             self?.stopAnimating()
         }
     }

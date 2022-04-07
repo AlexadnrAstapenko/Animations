@@ -13,6 +13,9 @@
 		620B255227F658CB007437AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 620B255027F658CB007437AE /* Main.storyboard */; };
 		620B255427F658CC007437AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 620B255327F658CC007437AE /* Assets.xcassets */; };
 		620B255727F658CC007437AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 620B255527F658CC007437AE /* LaunchScreen.storyboard */; };
+		620B256127F66ECF007437AE /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 620B256027F66ECF007437AE /* NVActivityIndicatorView */; };
+		620B256327F66ECF007437AE /* NVActivityIndicatorViewExtended in Frameworks */ = {isa = PBXBuildFile; productRef = 620B256227F66ECF007437AE /* NVActivityIndicatorViewExtended */; };
+		62D912B327F6EB7E00202EFF /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D912B227F6EB7E00202EFF /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,7 @@
 		620B255327F658CC007437AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		620B255627F658CC007437AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		620B255827F658CC007437AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62D912B227F6EB7E00202EFF /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				620B256127F66ECF007437AE /* NVActivityIndicatorView in Frameworks */,
+				620B256327F66ECF007437AE /* NVActivityIndicatorViewExtended in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +62,48 @@
 		620B254927F658CB007437AE /* animations */ = {
 			isa = PBXGroup;
 			children = (
-				620B254A27F658CB007437AE /* AppDelegate.swift */,
-				620B254C27F658CB007437AE /* SceneDelegate.swift */,
-				620B254E27F658CB007437AE /* ViewController.swift */,
-				620B255027F658CB007437AE /* Main.storyboard */,
+				62AAB94627FCB4E400C85A99 /* Data */,
+				62AAB94527FCB4CA00C85A99 /* View */,
+				62AAB94427FCB4BC00C85A99 /* Controllers */,
+				62AAB94127FCB44900C85A99 /* App */,
 				620B255327F658CC007437AE /* Assets.xcassets */,
-				620B255527F658CC007437AE /* LaunchScreen.storyboard */,
 				620B255827F658CC007437AE /* Info.plist */,
 			);
 			path = animations;
+			sourceTree = "<group>";
+		};
+		62AAB94127FCB44900C85A99 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				620B254C27F658CB007437AE /* SceneDelegate.swift */,
+				620B254A27F658CB007437AE /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		62AAB94427FCB4BC00C85A99 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				620B254E27F658CB007437AE /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		62AAB94527FCB4CA00C85A99 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				620B255527F658CC007437AE /* LaunchScreen.storyboard */,
+				620B255027F658CB007437AE /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		62AAB94627FCB4E400C85A99 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				62D912B227F6EB7E00202EFF /* Data.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +122,10 @@
 			dependencies = (
 			);
 			name = animations;
+			packageProductDependencies = (
+				620B256027F66ECF007437AE /* NVActivityIndicatorView */,
+				620B256227F66ECF007437AE /* NVActivityIndicatorViewExtended */,
+			);
 			productName = animations;
 			productReference = 620B254727F658CB007437AE /* animations.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +154,9 @@
 				Base,
 			);
 			mainGroup = 620B253E27F658CB007437AE;
+			packageReferences = (
+				620B255F27F66ECF007437AE /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
+			);
 			productRefGroup = 620B254827F658CB007437AE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -141,6 +187,7 @@
 				620B254F27F658CB007437AE /* ViewController.swift in Sources */,
 				620B254B27F658CB007437AE /* AppDelegate.swift in Sources */,
 				620B254D27F658CB007437AE /* SceneDelegate.swift in Sources */,
+				62D912B327F6EB7E00202EFF /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +407,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		620B255F27F66ECF007437AE /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ninjaprox/NVActivityIndicatorView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		620B256027F66ECF007437AE /* NVActivityIndicatorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 620B255F27F66ECF007437AE /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorView;
+		};
+		620B256227F66ECF007437AE /* NVActivityIndicatorViewExtended */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 620B255F27F66ECF007437AE /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorViewExtended;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 620B253F27F658CB007437AE /* Project object */;
 }
